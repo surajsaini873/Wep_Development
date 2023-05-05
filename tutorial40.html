@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCS Grid 2</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-rows: 1fr 1fr 4fr;
+            grid-auto-rows: 2fr;
+            grid-template-columns: repeat(4, 2fr);
+            grid-gap: 1rem;
+        }
+        .box{
+            background-color: aqua;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <dvi class="box">This is Box-1</dvi>
+        <dvi class="box">This is Box-2</dvi>
+        <dvi class="box">This is Box-3</dvi>
+        <dvi class="box">This is Box-4</dvi>
+        <dvi class="box">This is Box-5</dvi>
+        <dvi class="box">This is Box-6</dvi>
+        <dvi class="box">This is Box-7</dvi>
+        <dvi class="box">This is Box-8</dvi>
+        <dvi class="box">This is Box-9</dvi>
+        <dvi class="box">This is Box-10</dvi>
+    </div>
+</body>
+</html>
