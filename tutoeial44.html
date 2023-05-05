@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media Queries</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+
+            aside {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            body {
+                background-color: blue;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            aside {
+                display: none;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width:500px) and (max-width:800px) {
+            body {
+                background-color: yellow;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width:800px) {
+            body {
+                background-color: magenta;
+            }
+        }
+
+        /* .border-now {
+            border: 2px solid black;
+            padding: 23px;
+            background-color: wheat;
+        } */
+        .bdr {
+            border: 2px solid black;
+            padding: 23px;
+            background-color: wheat;
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About Us</span>
+            <span>Service</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bdr">
+            <h2>Learns CSS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laboriosam temporibus incidunt, ad minus
+                assumenda consequatur cumque, repellendus optio error dolor quis quos veniam. Vero nulla facilis ducimus
+                aliquam laborum pariatur culpa eius temporibus, iure id quis autem, magni, corrupti tempore porro hic
+                sed enim. Earum cum vitae soluta molestiae quaerat error neque est, facilis voluptas sed, corporis,
+                reprehenderit eligendi assumenda! Ad officia consequatur tempore explicabo. Doloremque consectetur
+                eligendi ipsa rem voluptatum inventore autem reiciendis qui tempora natus obcaecati, enim asperiores,
+                aliquam debitis blanditiis minima quod. Est, minus. Beatae in ab similique ea veniam quaerat obcaecati
+                quibusdam quidem explicabo rem magni quas aliquam consequuntur autem maiores, nulla, doloribus quo
+                praesentium et vero. Commodi hic eius vel repellat? Iusto, atque aperiam earum qui dolore adipisci
+                architecto voluptate obcaecati rerum tenetur incidunt distinctio, maxime vitae ipsum ullam quibusdam
+                voluptatibus explicabo consequatur voluptas repudiandae fugit assumenda illo mollitia optio. Et earum
+                natus minus?</p>
+        </section>
+        <aside class="bdr">
+            <h1>More About Us</h1>
+        </aside>
+    </div>
+    <footer class="bdr">Copyright CodeBySuraj 2023</footer>
+</body>
+
+</html>
